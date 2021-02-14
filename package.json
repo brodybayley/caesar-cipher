@@ -1,0 +1,24 @@
+{
+  "name": "caesar-cipher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "caesar.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brodybayley/caesar-cipher.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brodybayley/caesar-cipher/issues"
+  },
+  "homepage": "https://github.com/brodybayley/caesar-cipher#readme",
+  "devDependencies": {
+    "chai": "^4.3.0",
+    "mocha": "^8.3.0"
+  }
+}
