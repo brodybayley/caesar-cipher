@@ -1,14 +1,19 @@
-const encrypt = function (plaintext, key) {
+const encrypt = function(plaintext, key) {
   let finalString = '';
-  const newKeyValue = plaintext.charCodeAt(0) - 97;
-  console.log(newKeyValue)
-  for (const newKey of newKeyValue) {
-    if (newKey >= 0) 
+  for (const letter of plaintext) {
+    const newKey = (letter.charCodeAt(0) - 97) + key; {
+      if (newKey < 0) {
+        const newLetter = String.fromCharCode(97 + (26 + newKey));
+        finalString += newLetter;
+      } else {
+        const newLetter = String.fromCharCode(97 + newKey);
+        finalString += newLetter;
+      }
+    }
   }
-  const newKey = String.fromCharCode(97 + newKeyValue);
   return finalString;
 };
 
-console.log(encrypt("b", -3));
+console.log(encrypt("hello", -3));
 
 module.exports = { encrypt };
